@@ -8,7 +8,7 @@ router = routers.DefaultRouter()
 router.register('tasks', views.TaskView, 'task')
 
 urlpatterns = [
-    path('', lambda request: HttpResponse('<html><body>Taski</body></html>')),
+    path('', lambda request: HttpResponse('<html><body>Taski<script src="/static/app.js"></script></body></html>')),
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
 ]
